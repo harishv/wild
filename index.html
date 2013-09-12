@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html ng-app="wildridgeApp">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Wildridge</title>
+  <link href="/css/style.css" rel="stylesheet" type="text/css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="/js/angular.min.js"></script>
+  <script src="/js/controllers.js"></script>
+  <script src="/players/flowplayer/flowplayer-3.2.12.min.js"></script>
+</head>
+
+<body ng-controller="WildridgeHome" ng-cloak>
+  <div class="container">
+    <header> <span class="logo"><img src="images/logo.png" /></span>
+      <div class="right">
+      </div>
+    </header>
+    <!--Header End-->
+
+    <div class="navgation">
+      <nav> <a href="#"><span>Now!</span></a> <a href="#" class="active"><span>News</span></a> <a href="#"><span>Entertainment</span></a> <a href="#"><span>Finance</span></a> <a href="#"><span>Lifestyle</span></a> <a href="#"><span>Local</span></a> <a href="#"><span>MyBenefits</span></a> <a href="#"><span>Live</span></a> </nav>
+      <div class="navright"> <a href="/"><img src="images/home.png"/></a> <a href="mailto:admin@wildridge.net"><img src="images/email.png"/></a> </div>
+    </div>
+    <!--Navgation End-->
+
+    <div class="banner">
+      <!-- BEGIN JS TAG - Wildrige.net_728x90 < - DO NOT MODIFY -->
+        <SCRIPT SRC="http://ib.adnxs.com/ttj?id=1736949&referrer=[REFERRER_URL]" TYPE="text/javascript"></SCRIPT>
+      <!-- END TAG -->
+    </div>
+    <!--banner End-->
+
+    <article>
+      <aside class="width67">
+        <div class="slideshow">
+          <div class="width60">
+            <div class="video" >
+              <a href="http://91cefb89b61292d7a6a5-9b3e53ad93e76fa27450765a72dfcdf1.r61.cf2.rackcdn.com/2013-09-11T041415Z_2_LOVE98A0BRQ1S_RTRMADV_STREAM-700-16X9-MP4_USA-SYRIA-OBAMA-ADDRESS-O.MP4" style="display:block;width:400px;height:266px;" id="player"></a>
+          </div>
+        </div>
+        <div class="slideshow-content width40">
+          <div class="slideshow-title">{{ latestVideo[0].value.title }}</div>
+          <p></p><br />
+          <p>{{ latestVideo[0].value.description }}</p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <br />
+          <br />
+          <br />
+        </div>
+      </div>
+      <!--Slideshow VIDEOS End-->
+      <div class="clear"></div>
+      <div class="module">
+        <div class="module-title">AROUND THE WEB</div>
+        <div class="module-inner">
+          <div ng-repeat="n in top5">
+            <div class="row devider"><a ng-href="/n/{{n.value.id}}">{{ n.value.title }}</a></div>
+          </div>
+          <a class="more right" href="#">More News</a> 
+        </div>
+      </div>
+      <div class="module">
+        <div class="module-title">Featured Video</div>
+        <div class="livevideo">
+          <a href="http://91cefb89b61292d7a6a5-9b3e53ad93e76fa27450765a72dfcdf1.r61.cf2.rackcdn.com/2013-09-11T041415Z_2_LOVE98A0BRQ1S_RTRMADV_STREAM-700-16X9-MP4_USA-SYRIA-OBAMA-ADDRESS-O.MP4" style="display:block;width:600px;height:450px;" id="bigplayer"></a>
+        </div>
+      </div>
+    </aside>
+    <aside class="width30 margin20_L">
+      <div class="rt-tpadd">
+        <!-- BEGIN JS TAG - Wildrige.net_300x250 < - DO NOT MODIFY -->
+          <SCRIPT SRC="http://ib.adnxs.com/ttj?id=1736947&referrer=[REFERRER_URL]" TYPE="text/javascript"></SCRIPT>
+        <!-- END TAG -->
+      </div>
+      <div class="module margin20_T">
+        <div class="module-title">Trending Videos</div>
+        <div class="module-inner">
+          <div class="videwrow" ng-repeat="lvid in latestVideos"> 
+            <span class="thumb"><a ng-href="http://speakglobally.net/v/{{lvid.value[0]}}"><img ng-src="http://876490ded624fedbbf8f-2529efbed00bf302a12a4cac23251cd4.r64.cf2.rackcdn.com/{{ lvid.value[2] }}"/></a></span> 
+            <span class="width100">
+              <p><a ng-href="http://speakglobally.net/v/{{lvid.value[0]}}">{{ lvid.value[1] }}</a></p>
+              <p class="small margin20_T">-Reuters</p>
+            </span> 
+          </div>
+          <a href="http://speakglobally.net" class="more right">More Videos</a> </div>
+        </div>
+        <!--Trending Videos End-->
+
+        <div class="rt-btadd margin20_T">
+          <!-- BEGIN JS TAG - Wildrige.net_300x250 < - DO NOT MODIFY -->
+            <SCRIPT SRC="http://ib.adnxs.com/ttj?id=1736947&referrer=[REFERRER_URL]" TYPE="text/javascript"></SCRIPT>
+          <!-- END TAG -->
+        </div>
+        <div class="module twitterposts">
+          <div class="module-title"></div>
+    </div>
+    <!--Twitter on the news End-->
+
+    <div class="clear"></div>
+    </aside>
+  </article>
+  <!--Article End-->
+  <div class="banner">
+    <!-- BEGIN JS TAG - Wildrige.net_728x90 < - DO NOT MODIFY -->
+      <SCRIPT SRC="http://ib.adnxs.com/ttj?id=1736949&referrer=[REFERRER_URL]" TYPE="text/javascript"></SCRIPT>
+    <!-- END TAG -->
+  </div>
+  <!--Bottom-add End-->
+
+  <summary> <span class="left">Copyright &copy;  2013  Wildridge. All Rights Reserved | <a href="#">My Account</a>.</span> <span class="right"> <a href="#"><img src="images/twitter.png" /></a> <a href="#"><img src="images/facebook.png" /></a> <a href="#"><img src="images/google.png" /></a> <a href="#"><img src="images/linkdedin.png" /></a> </span> </summary>
+<!--Footer End--> 
+</div>      
+  <script language="JavaScript">
+    flowplayer("player", "/players/flowplayer/flowplayer-3.2.16.swf");
+    flowplayer("bigplayer", "/players/flowplayer/flowplayer-3.2.16.swf");
+  </script>
+</body>
+</html>
